@@ -6,12 +6,12 @@ import { Subscription } from 'rxjs';
 
 
 @Component({
-  
+
   templateUrl: './signup.component.html',
   styleUrls: ["./signup.component.css"]
 
 })
-export class Signupcomponent implements OnInit , OnDestroy{
+export class SignupComponent implements OnInit , OnDestroy{
   isLoading = false;
   private authStatusSub: Subscription;
 

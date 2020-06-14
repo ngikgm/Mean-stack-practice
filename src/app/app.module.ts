@@ -19,10 +19,11 @@ import { HeaderComponent } from "./header/header.component";
 import { PostListComponent } from "./posts/post-list/post-list.component";
 import { PostTestComponent } from './posts/post-test/post-test.component';
 import { LoginComponent } from './auth/login/login.component';
-import { Signupcomponent } from './auth/signup/signup.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { ErrorInterceptor } from './error-interceptor';
 import { ErrorComponent } from './error/error.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -34,12 +35,13 @@ import { ErrorComponent } from './error/error.component';
     PostListComponent,
     PostTestComponent,
     LoginComponent,
-    Signupcomponent,
+    SignupComponent,
     ErrorComponent
 
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -58,6 +60,6 @@ import { ErrorComponent } from './error/error.component';
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi : true}
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ErrorComponent]
+
 })
 export class AppModule {}
